@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 	
 	for(int i=0; i<min(A->clmn, A->row); i++)
 	{
-		int zero_row = 1,adder;
+		int zero_row = 1,adder=0;
 		for(int j=0; j<(A->clmn); j++)
 		{
 			if(*(*(A->entries+i)+j))

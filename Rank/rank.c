@@ -1,6 +1,6 @@
 #include <stdio.h>
-#define row 3
-#define clmn 4
+#define row 4
+#define clmn 5
 
 
 typedef struct{
@@ -16,16 +16,31 @@ int min(int a, int b);
 int main(void)
 {
 	Matrix A; build_Matrix(&A);
-	printf("\n");
+	printf("\n Row reduced form:\n-----------------\n");
 	
 	for(int i=0; i<min(clmn,row); i++)
 	{
-		row_divide(&A, A.entries[i][i], i);
+		int zero_row =1, adder=0;
+		
+		for(int j=0; j<clmn; j++)
+		{
+			if(A.entries[i][j])
+			{		
+				zero_row = 0; adder = j;
+				row_divide(&A, A.entries[i][j], i);				
+				break;
+			}
+		}
+		if(zero_row)
+		{
+			continue;
+		}
+
 		for(int j=0; j<row; j++)
 		{
 			if(i-j)
 			{
-				row_add(&A, j, i, -A.entries[j][i]);
+				row_add(&A, j, adder, -A.entries[j][i]);
 			}
 		}
 	}
