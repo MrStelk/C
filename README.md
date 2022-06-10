@@ -1,1 +1,1 @@
-# This repository contains some intersting projects and ideas coded in C.
+# This repository contains some interesting projects and ideas coded in C.
