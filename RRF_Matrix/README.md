@@ -2,7 +2,6 @@
 **rank.c** requires number of rows and columns as macros definations while **rank2.c** needs these inputs as cmd line args. 
 **rank2.c** is my first shot at working with 2D arrays completely via pointers in dynamic memory.
 
----
 
 ## rank.c
 Change marcos definations of *row* and *clmn* to work with the required matrix. </br >
