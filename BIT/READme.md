@@ -7,5 +7,6 @@ To compile and run:
     
 Initially the program asks for the number of elements in the array and then the array itself. It then proceeds to create a BIT for the given array.
 After creation it promps the user to select one of the following options:
-<img src="https://imgur.com/a/AgashKr">
+
+<img src="./img.png" height="80rem" width="160rem">
   
